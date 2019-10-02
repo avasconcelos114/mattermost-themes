@@ -27,7 +27,7 @@ function Thumbnail(props) {
     `;
 
     const Image = styled.div`
-        background: url(${props.image});
+        background: url(${process.env.PUBLIC_URL}/img/${props.image});
         background-repeat: no-repeat;
         background-size: cover;
         cursor: pointer;
@@ -77,7 +77,7 @@ function Thumbnail(props) {
     const resetCopyText = () => {
         copyTextRef.current.innerHTML = 'Copy style';
     }
-
+    console.log(process.env.PUBLIC_URL)
     return (
         <Wrapper onClick={copyToClipboard}>
             <ThemeTitleContainer>

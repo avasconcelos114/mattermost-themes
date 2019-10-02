@@ -4,6 +4,7 @@ import EightiesLight from './eightiesLight';
 import EmberJs from './emberJs';
 import Github from './github';
 import GruvboxDark from './gruvboxDark';
+import Hacktoberfest from './hacktoberfest';
 import Monokai from './monokai';
 import Nord from './nord';
 import OneDark from './oneDark';
@@ -16,6 +17,7 @@ const themes = [
     EmberJs,
     Github,
     GruvboxDark,
+    Hacktoberfest,
     Monokai,
     Nord,
     OneDark, 
