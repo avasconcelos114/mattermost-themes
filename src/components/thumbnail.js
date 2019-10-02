@@ -16,8 +16,25 @@ function Thumbnail(props) {
         height: 30rem;
     `;
 
+    const copyToClipboard = () => {
+        // Create textarea element and append to body
+        const textarea = document.createElement('textarea');
+        textarea.value = JSON.stringify(props.theme);
+        textarea.style.visibility = 'hidden';
+        textarea.readOnly = true;
+        document.body.appendChild(textarea);
+
+        // Select textarea and copy contents
+        textarea.select();
+        document.execCommand('copy');
+
+        // Remove from body and notify completion
+        document.body.removeChild(textarea);
+        alert('copied!')
+    } 
+
     return (
-        <Wrapper>
+        <Wrapper onClick={copyToClipboard}>
             <Image />
         </Wrapper>
     );
