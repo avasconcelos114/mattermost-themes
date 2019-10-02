@@ -12,12 +12,18 @@ function Body() {
     `;
 
     const Section = styled.div`
-    
+        padding: 20px;
     `;
 
     const SectionTitle = styled.h3`
-    
+        font-weight: 500;
     `;
+
+    const lightThemes = [];
+    const darkThemes = [];
+    themes.forEach(theme => {
+        theme.type === 'light' ? lightThemes.push(theme) : darkThemes.push(theme);
+    });
 
     return (
         <Wrapper>
@@ -26,8 +32,13 @@ function Body() {
             </Section>
 
             <Section>
-                <SectionTitle>Themes</SectionTitle>
-                <ImageCarousel themes={themes}/>
+                <SectionTitle>Light Themes</SectionTitle>
+                <ImageCarousel themes={lightThemes}/>
+            </Section>
+
+            <Section>
+                <SectionTitle>Dark Themes</SectionTitle>
+                <ImageCarousel themes={darkThemes}/>
             </Section>
         </Wrapper>
     );
