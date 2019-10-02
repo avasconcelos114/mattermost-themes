@@ -23,7 +23,7 @@ function Thumbnail(props) {
     `;
 
     const ThemeTitle = styled.p`
-
+        color: ${HexToRgba(props.theme.sidebarText, 1)};
     `;
 
     const Image = styled.div`
@@ -50,6 +50,7 @@ function Thumbnail(props) {
 
         span {
             font-size: 2rem;
+            color: ${HexToRgba(props.theme.sidebarText, 1)};
         }
     `;
 
