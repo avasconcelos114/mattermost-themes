@@ -8,6 +8,7 @@ function Header() {
         color: #fff;
         display: flex;
         flex-direction: row;
+        font-size: 2rem;
 
         h3 {
             margin: 0;
