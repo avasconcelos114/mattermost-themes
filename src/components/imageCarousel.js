@@ -5,7 +5,6 @@ import Thumbnail from './thumbnail';
 
 function ImageCarousel(props) {
     const SliderContainer = styled.div`
-      width: 100%;
       height: 100%;
       background-color: #454545;
       padding: 3rem;
