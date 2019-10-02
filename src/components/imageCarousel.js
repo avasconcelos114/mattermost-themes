@@ -1,9 +1,16 @@
 import React from 'react';
 import Slider from 'react-slick';
-
+import styled from 'styled-components';
 import Thumbnail from './thumbnail';
 
 function ImageCarousel(props) {
+    const SliderContainer = styled.div`
+      width: 100%;
+      height: 100%;
+      background-color: #454545;
+      padding: 3rem;
+    `;
+
     const settings = {
         dots: true,
         infinite: false,
@@ -21,9 +28,9 @@ function ImageCarousel(props) {
         })
     }
     return (
-        <Slider {...settings}>
-            {thumbnails}
-        </Slider>
+      <SliderContainer>
+        <Slider {...settings}>{thumbnails}</Slider>
+      </SliderContainer>
     );
 }
 

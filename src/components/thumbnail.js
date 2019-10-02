@@ -3,18 +3,22 @@ import styled from 'styled-components';
 
 function Thumbnail(props) {
     const Wrapper = styled.div`
-        padding: 10px;
-        background-color: #454545;
+        display: flex;
+        flex-direction: row;
+    `;
+
+    const Image = styled.div`
         background: url(${props.image});
         background-repeat: no-repeat;
-        background-size: contain;
-        width: 100%;
-        height: 300px;
+        background-size: cover;
+        border-radius: 1.2rem;
+        width: 40rem;
+        height: 30rem;
     `;
 
     return (
         <Wrapper>
-            
+            <Image />
         </Wrapper>
     );
 }
