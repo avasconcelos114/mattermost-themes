@@ -13,6 +13,7 @@ function ImageCarousel(props) {
     const settings = {
         dots: true,
         infinite: false,
+        lazyLoad: true,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
