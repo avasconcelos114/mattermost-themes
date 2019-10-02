@@ -11,6 +11,7 @@
     "react-slick": "^0.25.2",
     "slick-carousel": "^1.8.1",
     "styled-components": "^4.4.0",
+    "styled-components-breakpoint": "^2.1.1",
     "styled-icons": "^8.4.2"
   },
   "scripts": {

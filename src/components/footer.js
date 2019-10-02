@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import breakpoint from 'styled-components-breakpoint';
 import { Github } from "styled-icons/boxicons-logos/Github";
 
 function Footer() {
@@ -8,11 +9,15 @@ function Footer() {
         padding: 1.5rem;
         background-color: #454545;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         font-size: 1.7rem;
         justify-content: space-between;
         align-items: center;
-        height: 10rem;
+        min-height: 10rem;
+
+        ${breakpoint('tablet')`
+            flex-direction: row;
+        `}
 
         span {
             text-decoration: none;
@@ -75,7 +80,7 @@ function Footer() {
         </Link>
         <Span>
           <span>
-            This is an open source initiative not officially supported by{" "}
+            This is an open source initiative not affiliated with{" "}
             <a href="https://mattermost.com">Mattermost Inc.</a>
           </span>
           <span>
