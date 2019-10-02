@@ -43,7 +43,7 @@ function Thumbnail(props) {
         justify-content: center;
         align-items: center;
 
-        :hover {
+        &:hover {
             opacity: 1;
             background: ${HexToRgba(props.theme.sidebarBg, 0.8)};
         }
