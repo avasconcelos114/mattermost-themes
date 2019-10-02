@@ -12,8 +12,9 @@ function Header() {
 
         h3 {
             margin: 0;
+
             span:first-child {
-                color: #0058CC;
+                color: #12d7e6;            
             }
         }
     `;
