@@ -5,6 +5,7 @@ function Thumbnail(props) {
     const Wrapper = styled.div`
         display: flex;
         flex-direction: row;
+        margin-right: 2rem;
     `;
 
     const Image = styled.div`
@@ -12,6 +13,7 @@ function Thumbnail(props) {
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 1.2rem;
+        cursor: pointer;
         width: 40rem;
         height: 30rem;
     `;
