@@ -8,29 +8,68 @@ function Body() {
     const Wrapper = styled.div`
         display: flex;
         flex-direction: column;
-        background-color: #515151;
+        font-size: 1.5rem;
+        color: #fff;
     `;
 
     const Section = styled.div`
-    
+        padding: 2rem;
     `;
 
     const SectionTitle = styled.h3`
-    
+        font-weight: 500;
     `;
+
+    const SectionList = styled.ol`
+        line-height: 1.5;
+        padding-inline-start: 2rem;
+    `;
+
+    const Span = styled.span`
+        font-weight: bold;
+    `
+    
+    const lightThemes = [];
+    const darkThemes = [];
+    themes.forEach(theme => {
+        theme.type === 'light' ? lightThemes.push(theme) : darkThemes.push(theme);
+    });
 
     return (
         <Wrapper>
+        <Section>
+          <SectionTitle>How to:</SectionTitle>
+          <SectionList>
+            <li>
+              <Span>Click on a thumbnail </Span>to copy it to your clipboard
+            </li>
+            <li>Go to a Mattermost server of your choice</li>
+            <li>
+              Navigate to the <Span>Main Menu's Account Settings</Span>
+            </li>
+            <li>
+              Select <Span>Display </Span>and toggle the <Span>Custom </Span>
+              button
+            </li>
+            <li>
+              <Span>Paste the theme </Span>inside the text box and{" "}
+              <Span>Save</Span>
+            </li>
+          </SectionList>
+
+        </Section>
             <Section>
-                <SectionTitle>How to:</SectionTitle>
+                <SectionTitle>Light Themes</SectionTitle>
+                <ImageCarousel themes={lightThemes}/>
             </Section>
 
             <Section>
-                <SectionTitle>Themes</SectionTitle>
-                <ImageCarousel themes={themes}/>
+                <SectionTitle>Dark Themes</SectionTitle>
+                <ImageCarousel themes={darkThemes}/>
             </Section>
         </Wrapper>
-    );
-}
+    )
+};
+
 
 export default Body;

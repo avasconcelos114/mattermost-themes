@@ -1,6 +1,6 @@
 export default {
     name: 'GitHub',
-    thumbnailUrl: '/img/basic.png',
+    thumbnailUrl: '/img/github.png',
     type: 'light',
     theme: {
         sidebarBg:'#2b333d',
