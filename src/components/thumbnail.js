@@ -77,7 +77,7 @@ function Thumbnail(props) {
     const resetCopyText = () => {
         copyTextRef.current.innerHTML = 'Copy style';
     }
-    console.log(process.env.PUBLIC_URL)
+
     return (
         <Wrapper onClick={copyToClipboard}>
             <ThemeTitleContainer>
