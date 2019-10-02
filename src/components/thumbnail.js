@@ -58,6 +58,7 @@ function Thumbnail(props) {
         let style = JSON.stringify(props.theme);
         style = style.replace(' ', '');
         style = style.replace('\n', '');
+
         // Create textarea element and append to body
         const textarea = document.createElement('textarea');
         textarea.value = style
