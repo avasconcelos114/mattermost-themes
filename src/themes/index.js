@@ -1,27 +1,31 @@
-import Arc from './arc';
-import BlueOcean from './blueOcean';
-import EightiesLight from './eightiesLight';
-import EmberJs from './emberJs';
-import Github from './github';
-import GruvboxDark from './gruvboxDark';
-import Hacktoberfest from './hacktoberfest';
-import Monokai from './monokai';
-import Nord from './nord';
-import OneDark from './oneDark';
-import SolarizedDark from './solarizedDark';
+import arc from './arc';
+import blueOcean from './blueOcean';
+import devRant from './devRant'
+import eightiesLight from './eightiesLight';
+import emberJs from './emberJs';
+import facebook from './facebook';
+import github from './github';
+import gruvboxDark from './gruvboxDark';
+import hacktoberfest from './hacktoberfest';
+import monokai from './monokai';
+import nord from './nord';
+import oneDark from './oneDark';
+import solarizedDark from './solarizedDark';
 
 const themes = [
-    Arc,
-    BlueOcean,
-    EightiesLight,
-    EmberJs,
-    Github,
-    GruvboxDark,
-    Hacktoberfest,
-    Monokai,
-    Nord,
-    OneDark, 
-    SolarizedDark,
+    arc,
+    blueOcean,
+    devRant,
+    eightiesLight,
+    emberJs,
+    facebook,
+    github,
+    gruvboxDark,
+    hacktoberfest,
+    monokai,
+    nord,
+    oneDark, 
+    solarizedDark,
 ]
 
 export default themes;
