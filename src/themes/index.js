@@ -11,6 +11,7 @@ import monokai from './monokai';
 import nord from './nord';
 import oneDark from './oneDark';
 import solarizedDark from './solarizedDark';
+import solarizedLight from './solarizedLight';
 
 const themes = [
     arc,
@@ -26,6 +27,7 @@ const themes = [
     nord,
     oneDark, 
     solarizedDark,
+    solarizedLight,
 ]
 
 export default themes;
