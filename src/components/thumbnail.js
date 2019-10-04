@@ -19,11 +19,11 @@ function Thumbnail(props) {
         height: 3rem;
         justify-content: center;
         align-items: center;
-        background: ${HexToRgba(props.theme.sidebarBg, 1)};
+        background: ${props.theme.sidebarBg};
     `;
 
     const ThemeTitle = styled.p`
-        color: ${HexToRgba(props.theme.sidebarText, 1)};
+        color: ${props.theme.sidebarText};
     `;
 
     const Image = styled.div`
@@ -50,7 +50,7 @@ function Thumbnail(props) {
 
         span {
             font-size: 2rem;
-            color: ${HexToRgba(props.theme.sidebarText, 1)};
+            color: ${props.theme.sidebarText};
         }
     `;
 
