@@ -10,8 +10,11 @@ import hacktoberfest from './hacktoberfest';
 import monokai from './monokai';
 import nord from './nord';
 import oneDark from './oneDark';
+import python from './python';
+import retroTerminal from './retroTerminal';
 import solarizedDark from './solarizedDark';
 import solarizedLight from './solarizedLight';
+import vueJs from './vueJs';
 
 const themes = [
     arc,
@@ -26,8 +29,11 @@ const themes = [
     monokai,
     nord,
     oneDark, 
+    python,
+    retroTerminal,
     solarizedDark,
     solarizedLight,
+    vueJs
 ]
 
 export default themes;
