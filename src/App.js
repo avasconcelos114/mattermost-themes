@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './components/header';
 import Body from './components/body';
 import Footer from './components/footer';
-import { createGlobalStyle } from 'styled-components';
+import {createGlobalStyle} from 'styled-components';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';

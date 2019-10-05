@@ -1,7 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import styled from 'styled-components';
 import Thumbnail from './thumbnail';
+
+ImageCarousel.propTypes = {
+    themes: PropTypes.array,
+}
 
 function ImageCarousel(props) {
     const SliderContainer = styled.div`
@@ -51,9 +56,9 @@ function ImageCarousel(props) {
         })
     }
     return (
-      <SliderContainer>
-        <Slider {...settings}>{thumbnails}</Slider>
-      </SliderContainer>
+        <SliderContainer>
+            <Slider {...settings}>{thumbnails}</Slider>
+        </SliderContainer>
     );
 }
 

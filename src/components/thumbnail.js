@@ -1,6 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import {HexToRgba} from '../utils';
+
+Thumbnail.propTypes = {
+    theme: PropTypes.object.isRequired,
+    image: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+}
 
 function Thumbnail(props) {
     const copyTextRef = React.createRef();
