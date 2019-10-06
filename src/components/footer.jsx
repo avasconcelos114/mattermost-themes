@@ -79,11 +79,11 @@ function Footer() {
             </Link>
             <Span>
                 <span>
-                    {'This is an open source initiative not affiliated with'}
+                    {'This is an open source initiative not affiliated with '}
                     <a href='https://mattermost.com'>{'Mattermost Inc.'}</a>
                 </span>
                 <span>
-                    {'Created for the'}
+                    {'Created for the '}
                     <a href='https://hacktoberfest.digitalocean.com/'>
                         {'2019 Hacktoberfest '}
                     </a>
