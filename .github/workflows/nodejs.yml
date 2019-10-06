@@ -17,10 +17,11 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
+    - name: Run tests and check styling
       run: |
         npm install
         npm test
+        npm run check
       env:
         CI: true
   build_and_deploy:

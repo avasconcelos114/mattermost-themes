@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
-import { Github } from "styled-icons/boxicons-logos/Github";
+import {Github} from 'styled-icons/boxicons-logos/Github';
 
 function Footer() {
     const Wrapper = styled.div`
@@ -46,7 +46,6 @@ function Footer() {
       }
     `;
 
-
     const GithubIconWhite = styled(Github)`
       height: 4.5rem;
       color: #d4d4d4;
@@ -71,33 +70,33 @@ function Footer() {
     `;
 
     return (
-      <Wrapper>
-        <Link href="https://github.com/avasconcelos114/mattermost-themes">
-          <span>
-            <GithubIconWhite />
-          </span>
-          <p>View on GitHub</p>
-        </Link>
-        <Span>
-          <span>
-            This is an open source initiative not affiliated with{" "}
-            <a href="https://mattermost.com">Mattermost Inc.</a>
-          </span>
-          <span>
-            Created for the{" "}
-            <a href="https://hacktoberfest.digitalocean.com/">
-              2019 Hacktoberfest{" "}
-            </a>
-            by
-            <br />
-            <a href="https://github.com/avasconcelos114/">
-              {" "}
-              Andre Vasconcelos
-            </a>{" "}
-            & <a href="https://github.com/josephk96">Soo Hwan Kim</a>
-          </span>
-        </Span>
-      </Wrapper>
+        <Wrapper>
+            <Link href='https://github.com/avasconcelos114/mattermost-themes'>
+                <span>
+                    <GithubIconWhite />
+                </span>
+                <p>View on GitHub</p>
+            </Link>
+            <Span>
+                <span>
+                    This is an open source initiative not affiliated with{' '}
+                    <a href='https://mattermost.com'>Mattermost Inc.</a>
+                </span>
+                <span>
+                    Created for the{' '}
+                    <a href='https://hacktoberfest.digitalocean.com/'>
+                    2019 Hacktoberfest{' '}
+                    </a>
+                    by
+                    <br />
+                    <a href='https://github.com/avasconcelos114/'>
+                        {' '}
+                    Andre Vasconcelos
+                    </a>{' '}
+                    & <a href='https://github.com/josephk96'>Soo Hwan Kim</a>
+                </span>
+            </Span>
+        </Wrapper>
     );
 };
 

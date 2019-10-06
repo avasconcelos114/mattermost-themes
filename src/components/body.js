@@ -55,7 +55,7 @@ function Body() {
                         button
                     </li>
                     <li>
-                        <Span>Paste the theme </Span>inside the text box and{" "}
+                        <Span>Paste the theme </Span>inside the text box and{' '}
                         <Span>Save</Span>
                     </li>
                 </SectionList>
@@ -72,6 +72,5 @@ function Body() {
         </Wrapper>
     )
 };
-
 
 export default Body;
