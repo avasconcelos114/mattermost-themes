@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import {HexToRgba} from '../utils';
+import {hexToRgba} from '../utils';
 
 Thumbnail.propTypes = {
     theme: PropTypes.object.isRequired,
     image: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-}
+};
 
 function Thumbnail(props) {
     const copyTextRef = React.createRef();
@@ -52,7 +52,7 @@ function Thumbnail(props) {
 
         &:hover {
             opacity: 1;
-            background: ${HexToRgba(props.theme.sidebarBg, 0.8)};
+            background: ${hexToRgba(props.theme.sidebarBg, 0.8)};
         }
 
         span {
@@ -68,7 +68,7 @@ function Thumbnail(props) {
 
         // Create textarea element and append to body
         const textarea = document.createElement('textarea');
-        textarea.value = style
+        textarea.value = style;
         textarea.readOnly = true;
         document.body.appendChild(textarea);
 
@@ -79,11 +79,11 @@ function Thumbnail(props) {
         // Remove from body and notify completion
         document.body.removeChild(textarea);
         copyTextRef.current.innerHTML = 'Copied!';
-    } 
+    };
 
     const resetCopyText = () => {
         copyTextRef.current.innerHTML = 'Copy style';
-    }
+    };
 
     return (
         <Wrapper onClick={copyToClipboard}>
@@ -92,7 +92,7 @@ function Thumbnail(props) {
             </ThemeTitleContainer>
             <Image>
                 <ImageOverlay onMouseLeave={resetCopyText}>
-                    <span ref={copyTextRef}>Copy style</span>
+                    <span ref={copyTextRef}>{'Copy style'}</span>
                 </ImageOverlay>
             </Image>
         </Wrapper>
