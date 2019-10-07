@@ -73,31 +73,29 @@ function Footer() {
         <Wrapper>
             <Link href='https://github.com/avasconcelos114/mattermost-themes'>
                 <span>
-                    <GithubIconWhite />
+                    <GithubIconWhite/>
                 </span>
-                <p>View on GitHub</p>
+                <p>{'View on GitHub'}</p>
             </Link>
             <Span>
                 <span>
-                    This is an open source initiative not affiliated with{' '}
-                    <a href='https://mattermost.com'>Mattermost Inc.</a>
+                    {'This is an open source initiative not affiliated with '}
+                    <a href='https://mattermost.com'>{'Mattermost Inc.'}</a>
                 </span>
                 <span>
-                    Created for the{' '}
+                    {'Created for the '}
                     <a href='https://hacktoberfest.digitalocean.com/'>
-                    2019 Hacktoberfest{' '}
+                        {'2019 Hacktoberfest '}
                     </a>
-                    by
-                    <br />
-                    <a href='https://github.com/avasconcelos114/'>
-                        {' '}
-                    Andre Vasconcelos
-                    </a>{' '}
-                    & <a href='https://github.com/josephk96'>Soo Hwan Kim</a>
+                    {'by'}
+                    <br/>
+                    <a href='https://github.com/avasconcelos114/'>{'Andre Vasconcelos'}</a>
+                    {' & '}
+                    <a href='https://github.com/josephk96'>{'Soo Hwan Kim'}</a>
                 </span>
             </Span>
         </Wrapper>
     );
-};
+}
 
 export default Footer;

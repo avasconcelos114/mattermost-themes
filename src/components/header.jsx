@@ -18,11 +18,12 @@ function Header() {
             }
         }
     `;
+
     return (
         <Wrapper>
             <h3>
-                <span>Mattermost </span>
-                <span>Themes</span>
+                <span>{'Mattermost '}</span>
+                <span>{'Themes'}</span>
             </h3>
         </Wrapper>
     );

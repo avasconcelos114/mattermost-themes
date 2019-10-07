@@ -6,7 +6,7 @@ import Thumbnail from './thumbnail';
 
 ImageCarousel.propTypes = {
     themes: PropTypes.array,
-}
+};
 
 function ImageCarousel(props) {
     const SliderContainer = styled.div`
@@ -28,32 +28,37 @@ function ImageCarousel(props) {
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
-                }
+                },
             },
             {
                 breakpoint: 1000,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                }
+                },
             },
             {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                }
+                },
             },
         ],
     };
 
     const thumbnails = [];
     if (props.themes) {
-        props.themes.forEach(theme => {
+        props.themes.forEach((theme) => {
             thumbnails.push(
-                <Thumbnail key={theme.name} name={theme.name} image={theme.thumbnailUrl} theme={theme.theme}/>
-            )
-        })
+                <Thumbnail
+                    key={theme.name}
+                    name={theme.name}
+                    image={theme.thumbnailUrl}
+                    theme={theme.theme}
+                />
+            );
+        });
     }
     return (
         <SliderContainer>

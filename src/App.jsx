@@ -20,10 +20,10 @@ const GlobalStyle = createGlobalStyle`
 function App() {
     return (
         <>
-            <GlobalStyle />
-            <Header />
-            <Body />
-            <Footer />
+            <GlobalStyle/>
+            <Header/>
+            <Body/>
+            <Footer/>
         </>
     );
 }

@@ -1,6 +1,6 @@
 import arc from './arc';
 import blueOcean from './blueOcean';
-import devRant from './devRant'
+import devRant from './devRant';
 import eightiesLight from './eightiesLight';
 import emberJs from './emberJs';
 import facebook from './facebook';
@@ -28,12 +28,12 @@ const themes = [
     hacktoberfest,
     monokai,
     nord,
-    oneDark, 
+    oneDark,
     python,
     retroTerminal,
     solarizedDark,
     solarizedLight,
-    vueJs
-]
+    vueJs,
+];
 
 export default themes;

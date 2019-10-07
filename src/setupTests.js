@@ -1,7 +1,9 @@
-window.matchMedia = window.matchMedia || function() {
+function mockMatchMedia() {
     return {
-        matches : false,
-        addListener : function() {},
-        removeListener: function() {}
+        matches: false,
+        addListener() {},
+        removeListener() {},
     };
-};
+}
+
+window.matchMedia = window.matchMedia || mockMatchMedia;
