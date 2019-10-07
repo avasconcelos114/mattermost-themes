@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ImageCarousel from './imageCarousel';
+import Carousel from './carousel';
+
 import themes from '../themes';
 
 function Body() {
@@ -42,41 +43,22 @@ function Body() {
         }
     });
 
+    // Check whether user already completed onboarding
+    const onboardingCompleted = localStorage.getItem('mmthemesOnboardingCompleted');
+    if (!onboardingCompleted) {
+        // show modal
+    }
+
     return (
         <Wrapper>
             <Section>
-                <SectionTitle>{'How to:'}</SectionTitle>
-                <SectionList>
-                    <li>
-                        <Span>{'Click on a thumbnail '}</Span>{'to copy it to your clipboard'}
-                    </li>
-                    <li>{'Go to a Mattermost server of your choice'}</li>
-                    <li>
-                        {'Navigate to the '}
-                        <Span>{'Main Menu\'s Account Settings'}</Span>
-                    </li>
-                    <li>
-                        {'Select '}
-                        <Span>{'Display '}</Span>
-                        {'and toggle the '}
-                        <Span>{'Custom '}</Span>
-                        {'button'}
-                    </li>
-                    <li>
-                        <Span>{'Paste the theme '}</Span>
-                        {'inside the text box and '}
-                        <Span>{'Save'}</Span>
-                    </li>
-                </SectionList>
-            </Section>
-            <Section>
                 <SectionTitle>{'Light Themes'}</SectionTitle>
-                <ImageCarousel themes={lightThemes}/>
+                <Carousel themes={lightThemes}/>
             </Section>
 
             <Section>
                 <SectionTitle>{'Dark Themes'}</SectionTitle>
-                <ImageCarousel themes={darkThemes}/>
+                <Carousel themes={darkThemes}/>
             </Section>
         </Wrapper>
     );

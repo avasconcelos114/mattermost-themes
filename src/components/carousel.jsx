@@ -4,11 +4,11 @@ import Slider from 'react-slick';
 import styled from 'styled-components';
 import Thumbnail from './thumbnail';
 
-ImageCarousel.propTypes = {
+Carousel.propTypes = {
     themes: PropTypes.array,
 };
 
-function ImageCarousel(props) {
+function Carousel(props) {
     const SliderContainer = styled.div`
       height: 100%;
       background-color: #454545;
@@ -67,4 +67,4 @@ function ImageCarousel(props) {
     );
 }
 
-export default ImageCarousel;
+export default Carousel;
