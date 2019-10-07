@@ -1,6 +1,7 @@
 import arc from './arc';
 import blueOcean from './blueOcean';
 import devRant from './devRant';
+import dracula from './dracula';
 import eightiesLight from './eightiesLight';
 import emberJs from './emberJs';
 import facebook from './facebook';
@@ -24,6 +25,7 @@ const themes = [
     arc,
     blueOcean,
     devRant,
+    dracula,
     eightiesLight,
     emberJs,
     facebook,
