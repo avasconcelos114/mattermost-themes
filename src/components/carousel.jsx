@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import styled from 'styled-components';
-import Thumbnail from './thumbnail';
 
-ImageCarousel.propTypes = {
-    themes: PropTypes.array,
+Carousel.propTypes = {
+    children: PropTypes.array,
+    isOnboarding: PropTypes.bool,
 };
 
-function ImageCarousel(props) {
+function Carousel(props) {
     const SliderContainer = styled.div`
       height: 100%;
       background-color: #454545;
@@ -47,24 +47,18 @@ function ImageCarousel(props) {
         ],
     };
 
-    const thumbnails = [];
-    if (props.themes) {
-        props.themes.forEach((theme) => {
-            thumbnails.push(
-                <Thumbnail
-                    key={theme.name}
-                    name={theme.name}
-                    image={theme.thumbnailUrl}
-                    theme={theme.theme}
-                />
-            );
-        });
+    // Force carousel to show single slide on onboarding modal
+    if (props.isOnboarding) {
+        settings.slidesToShow = 1;
+        settings.slidesToScroll = 1;
+        settings.responsive = [];
     }
+
     return (
         <SliderContainer>
-            <Slider {...settings}>{thumbnails}</Slider>
+            <Slider {...settings}>{props.children}</Slider>
         </SliderContainer>
     );
 }
 
-export default ImageCarousel;
+export default Carousel;
