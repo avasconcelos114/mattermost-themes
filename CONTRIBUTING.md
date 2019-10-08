@@ -10,7 +10,8 @@ email, or any other method with the owners of this repository before making a ch
 2. Save the screenshot under `public/img` with the naming standard `{themeName}.png` (in camel-casing)
 3. Add a new file under `src/themes` and copy the contents of another theme into this one
 4. Edit the `name`, `thumbnailUrl`, the `type` of theme to either `light` or `dark, and paste the JSON string from Mattermost's Account Settings into `theme`
-5. Create a PR (see below) to add your contribution!
+5. Import your newly created file to `src/themes/index.js` and add it to the exports
+6. Create a PR (see below) to add your contribution!
 
 ## Pull Request Process
 
