@@ -34,7 +34,7 @@ function Thumbnail(props) {
     `;
 
     const Image = styled.div`
-        background: url(${process.env.PUBLIC_URL}/img/${props.image});
+        background: url(/img/${props.image});
         background-repeat: no-repeat;
         background-size: cover;
         cursor: pointer;

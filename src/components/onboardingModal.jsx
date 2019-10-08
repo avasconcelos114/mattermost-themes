@@ -104,7 +104,7 @@ function OnboardingModal(props) {
                             {'to copy it to your clipboard.'}
                         </StepText>
                         <StepImageWrapper>
-                            <StepImage src={`${process.env.PUBLIC_URL}/img/onboarding/onboarding_1.png`}/>
+                            <StepImage src={'/img/onboarding/onboarding_1.png'}/>
                         </StepImageWrapper>
                     </StepWrapper>
 
@@ -115,7 +115,7 @@ function OnboardingModal(props) {
                             {'on any Mattermost server.'}
                         </StepText>
                         <StepImageWrapper>
-                            <StepImage src={`${process.env.PUBLIC_URL}/img/onboarding/onboarding_2.png`}/>
+                            <StepImage src={'img/onboarding/onboarding_2.png'}/>
                         </StepImageWrapper>
                     </StepWrapper>
 
@@ -127,7 +127,7 @@ function OnboardingModal(props) {
                             <strong>{'Themes tab.'}</strong>
                         </StepText>
                         <StepImageWrapper>
-                            <StepImage src={`${process.env.PUBLIC_URL}/img/onboarding/onboarding_3.png`}/>
+                            <StepImage src={'img/onboarding/onboarding_3.png'}/>
                         </StepImageWrapper>
                     </StepWrapper>
 
@@ -141,7 +141,7 @@ function OnboardingModal(props) {
                             <strong>{'save!'}</strong>
                         </StepText>
                         <StepImageWrapper>
-                            <StepImage src={`${process.env.PUBLIC_URL}/img/onboarding/onboarding_4.png`}/>
+                            <StepImage src={'img/onboarding/onboarding_4.png'}/>
                         </StepImageWrapper>
                     </StepWrapper>
                 </Carousel>
