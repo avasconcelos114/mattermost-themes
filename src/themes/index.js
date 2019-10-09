@@ -20,6 +20,7 @@ import solarizedDark from './solarizedDark';
 import solarizedLight from './solarizedLight';
 import vueJs from './vueJs';
 import windows95 from './windows95';
+import darkFunky from './darkFunky';
 
 const themes = [
     arc,
@@ -44,6 +45,7 @@ const themes = [
     solarizedLight,
     vueJs,
     windows95,
+    darkFunky,
 ];
 
 export default themes;
