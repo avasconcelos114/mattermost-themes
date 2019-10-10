@@ -60,12 +60,13 @@ function Body() {
         margin-left: 2rem;
         border-radius: 4px;
         border: none;
-        background-color: #12d7e6;
+        background-color: #0058CC;
+        color: #fff;
         padding: 10px;
         cursor: pointer;
 
         &:hover {
-            background-color: #3ce3f0;
+            background-color: #044FB1;
         }
     `;
 
