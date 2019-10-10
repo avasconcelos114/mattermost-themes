@@ -31,6 +31,7 @@ function Body() {
     const Wrapper = styled.div`
         display: flex;
         flex-direction: column;
+        overflow-x: hidden;
         font-size: 1.5rem;
         color: #fff;
     `;

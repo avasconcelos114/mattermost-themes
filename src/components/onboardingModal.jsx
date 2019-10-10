@@ -73,6 +73,7 @@ function OnboardingModal(props) {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            zIndex: 5,
         },
         content: {
             padding: 0,
@@ -104,7 +105,10 @@ function OnboardingModal(props) {
                             {'to copy it to your clipboard.'}
                         </StepText>
                         <StepImageWrapper>
-                            <StepImage src={`${process.env.PUBLIC_URL}/img/onboarding/onboarding_1.png`}/>
+                            <StepImage
+                                alt={'onboarding_1'}
+                                src={`${process.env.PUBLIC_URL}/img/onboarding/onboarding_1.png`}
+                            />
                         </StepImageWrapper>
                     </StepWrapper>
 
@@ -115,7 +119,10 @@ function OnboardingModal(props) {
                             {'on any Mattermost server.'}
                         </StepText>
                         <StepImageWrapper>
-                            <StepImage src={`${process.env.PUBLIC_URL}/img/onboarding/onboarding_2.png`}/>
+                            <StepImage
+                                alt={'onboarding_2'}
+                                src={`${process.env.PUBLIC_URL}/img/onboarding/onboarding_2.png`}
+                            />
                         </StepImageWrapper>
                     </StepWrapper>
 
@@ -127,7 +134,10 @@ function OnboardingModal(props) {
                             <strong>{'Themes tab.'}</strong>
                         </StepText>
                         <StepImageWrapper>
-                            <StepImage src={`${process.env.PUBLIC_URL}/img/onboarding/onboarding_3.png`}/>
+                            <StepImage
+                                alt={'onboarding_3'}
+                                src={`${process.env.PUBLIC_URL}/img/onboarding/onboarding_3.png`}
+                            />
                         </StepImageWrapper>
                     </StepWrapper>
 
@@ -141,7 +151,10 @@ function OnboardingModal(props) {
                             <strong>{'save!'}</strong>
                         </StepText>
                         <StepImageWrapper>
-                            <StepImage src={`${process.env.PUBLIC_URL}/img/onboarding/onboarding_4.png`}/>
+                            <StepImage
+                                alt={'onboarding_4'}
+                                src={`${process.env.PUBLIC_URL}/img/onboarding/onboarding_4.png`}
+                            />
                         </StepImageWrapper>
                     </StepWrapper>
                 </Carousel>
