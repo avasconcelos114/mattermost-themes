@@ -34,7 +34,7 @@ function CarouselArrow(props) {
         `;
         return (
             <Arrow
-                style={{right: '-4.5rem'}}
+                style={{right: '-8.5rem'}}
                 onClick={onClick}
             >
                 <ArrowIcon/>
@@ -50,7 +50,7 @@ function CarouselArrow(props) {
     // Prev arrow
     return (
         <Arrow
-            style={{left: '-4.5rem'}}
+            style={{left: '-9.5rem'}}
             onClick={onClick}
         >
             <ArrowIcon/>
