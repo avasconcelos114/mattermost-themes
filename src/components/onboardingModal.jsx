@@ -43,6 +43,7 @@ function OnboardingModal(props) {
     const StepImage = styled.img`
         margin: 0 auto;
         width: 80%;
+        max-width: 100%;
         height: auto;
 
         ${breakpoint('tablet')`
