@@ -17,7 +17,8 @@ function Thumbnail(props) {
         flex-direction: column;
         border-radius: 1.2rem;
         overflow: hidden;
-        margin-right: 2rem;
+        margin:  5px 2rem 21px 0px;
+        box-shadow: 1px 6px 20px rgba(0,0,0,0.35);
     `;
 
     const ThemeTitleContainer = styled.div`
