@@ -35,7 +35,4 @@ jobs:
     - name: Install dependencies
       run: npm install
     - name: Run ESlint Tests
-      uses: gimenete/eslint-action@1.0
-      env:
-        CI: true
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: npm run check
