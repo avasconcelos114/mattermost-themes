@@ -1,0 +1,30 @@
+name: Run tests
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  run_jest:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+    - name: Run Jest Tests
+    - uses: actions/checkout@v1
+      uses: stefanoeb/jest-action@1.0.0
+      env:
+        CI: true
+
+  run_eslint:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+    - name: Run ESlint Tests
+    - uses: actions/checkout@v1
+      uses: gimenete/eslint-action@1.0
+      env:
+        CI: true
