@@ -1,0 +1,38 @@
+name: Run tests
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  run_jest:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install dependencies
+      run: npm install
+    - name: Run Jest Tests
+      run: npm test
+      env:
+        CI: true
+
+  run_eslint:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install dependencies
+      run: npm install
+    - name: Run ESlint Tests
+      run: npm run check
