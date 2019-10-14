@@ -1,6 +1,7 @@
 import arc from './arc';
 import blueOcean from './blueOcean';
 import devRant from './devRant';
+import discord from './discord';
 import dracula from './dracula';
 import eightiesLight from './eightiesLight';
 import emberJs from './emberJs';
@@ -18,6 +19,8 @@ import redditLight from './redditLight';
 import retroTerminal from './retroTerminal';
 import solarizedDark from './solarizedDark';
 import solarizedLight from './solarizedLight';
+import trello from './trello';
+import twitter from './twitter';
 import vueJs from './vueJs';
 import windows95 from './windows95';
 import darkFunky from './darkFunky';
@@ -26,6 +29,7 @@ const themes = [
     arc,
     blueOcean,
     devRant,
+    discord,
     dracula,
     eightiesLight,
     emberJs,
@@ -43,6 +47,8 @@ const themes = [
     retroTerminal,
     solarizedDark,
     solarizedLight,
+    trello,
+    twitter,
     vueJs,
     windows95,
     darkFunky,
