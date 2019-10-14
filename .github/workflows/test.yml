@@ -38,3 +38,4 @@ jobs:
       uses: gimenete/eslint-action@1.0
       env:
         CI: true
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
