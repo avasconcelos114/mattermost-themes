@@ -11,10 +11,14 @@ jobs:
       matrix:
         node-version: [12.x]
     steps:
-    - name: Check out branch
-      uses: actions/checkout@v1
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install dependencies
+      run: npm install
     - name: Run Jest Tests
-      uses: stefanoeb/jest-action@1.0.0
+      run: npm test
       env:
         CI: true
 
@@ -24,8 +28,12 @@ jobs:
       matrix:
         node-version: [12.x]
     steps:
-    - name: Check out branch
-      uses: actions/checkout@v1
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install dependencies
+      run: npm install
     - name: Run ESlint Tests
       uses: gimenete/eslint-action@1.0
       env:
