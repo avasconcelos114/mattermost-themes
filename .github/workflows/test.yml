@@ -2,7 +2,7 @@ name: Run tests
 
 on:
   pull_request:
-    types: [opened]
+    types: [opened, synchronize]
 
 jobs:
   run_jest:
@@ -11,8 +11,9 @@ jobs:
       matrix:
         node-version: [12.x]
     steps:
+    - name: Check out branch
+      uses: actions/checkout@v1
     - name: Run Jest Tests
-    - uses: actions/checkout@v1
       uses: stefanoeb/jest-action@1.0.0
       env:
         CI: true
@@ -23,8 +24,9 @@ jobs:
       matrix:
         node-version: [12.x]
     steps:
+    - name: Check out branch
+      uses: actions/checkout@v1
     - name: Run ESlint Tests
-    - uses: actions/checkout@v1
       uses: gimenete/eslint-action@1.0
       env:
         CI: true
