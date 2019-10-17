@@ -7,7 +7,7 @@ function Footer() {
     const Wrapper = styled.div`
         margin-top: 5rem;
         padding: 1.5rem;
-        background-color: #454545;
+        background-color: #222C3B;
         display: flex;
         flex-direction: column;
         font-size: 1.7rem;
@@ -65,7 +65,8 @@ function Footer() {
 
         span > a {
             text-decoration: none;
-            color: #12d7e6;
+            font-weight: bold;
+            color: #1969D3;
         }
     `;
 

@@ -42,7 +42,8 @@ function OnboardingModal(props) {
 
     const StepImage = styled.img`
         margin: 0 auto;
-        width: 100%;
+        width: 80%;
+        max-width: 100%;
         height: auto;
 
         ${breakpoint('tablet')`
@@ -57,7 +58,7 @@ function OnboardingModal(props) {
         padding: 20px;
         margin: 0;
         cursor: pointer;
-        color: #12d7e6;
+        color: #0058CC;
         text-decoration: underline;
         font-size: 1.5rem;
     `;
@@ -78,7 +79,7 @@ function OnboardingModal(props) {
         content: {
             padding: 0,
             border: 'none',
-            background: '#454545',
+            background: '#181F29',
             display: 'flex',
             flexDirection: 'column',
             width: 'auto',
