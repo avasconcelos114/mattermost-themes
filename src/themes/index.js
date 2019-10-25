@@ -1,5 +1,6 @@
 import arc from './arc';
 import blueOcean from './blueOcean';
+import code from './code';
 import devRant from './devRant';
 import discord from './discord';
 import dracula from './dracula';
@@ -28,6 +29,7 @@ import darkFunky from './darkFunky';
 const themes = [
     arc,
     blueOcean,
+    code,
     devRant,
     discord,
     dracula,
