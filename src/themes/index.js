@@ -1,6 +1,8 @@
 import arc from './arc';
 import blueOcean from './blueOcean';
+import christmas from './christmas';
 import code from './code';
+import darkFunky from './darkFunky';
 import devRant from './devRant';
 import discord from './discord';
 import dracula from './dracula';
@@ -20,16 +22,19 @@ import redditLight from './redditLight';
 import retroTerminal from './retroTerminal';
 import solarizedDark from './solarizedDark';
 import solarizedLight from './solarizedLight';
+import spotify from './spotify';
 import trello from './trello';
 import twitter from './twitter';
 import vueJs from './vueJs';
 import windows95 from './windows95';
-import darkFunky from './darkFunky';
+import youtube from './youtube';
 
 const themes = [
     arc,
     blueOcean,
+    christmas,
     code,
+    darkFunky,
     devRant,
     discord,
     dracula,
@@ -49,11 +54,12 @@ const themes = [
     retroTerminal,
     solarizedDark,
     solarizedLight,
+    spotify,
     trello,
     twitter,
     vueJs,
     windows95,
-    darkFunky,
+    youtube,
 ];
 
 export default themes;
