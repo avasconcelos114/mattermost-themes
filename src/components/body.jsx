@@ -111,8 +111,12 @@ function Body() {
                         {'Select '}
                         <Span>{'Display '}</Span>
                         {'and toggle the '}
-                        <Span>{'Custom '}</Span>
-                        {'button'}
+                        <Span>{'Theme '}</Span>
+                        {'tab'}
+                    </li>
+                    <li>
+                        {'Select '}
+                        <Span>{'Custom Theme'}</Span>
                     </li>
                     <li>
                         <Span>{'Paste the theme '}</Span>
