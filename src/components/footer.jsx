@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import breakpoint from 'styled-components-breakpoint';
 import {Github} from 'styled-icons/boxicons-logos/Github';
-import {colors, hexToRgba} from '../utils';
+import {colors, hexToRgba, breakpoint} from '../utils';
 
 function Footer() {
     const Wrapper = styled.div`
@@ -16,7 +15,7 @@ function Footer() {
         align-items: center;
         min-height: 10rem;
 
-        ${breakpoint('tablet')`
+        ${breakpoint('md')`
             flex-direction: row;
         `}
 

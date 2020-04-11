@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import breakpoint from 'styled-components-breakpoint';
 import styled from 'styled-components';
 import Modal from 'react-modal';
 
-import {colors, hexToRgba} from '../utils';
+import {colors, hexToRgba, breakpoint} from '../utils';
 import Carousel from './carousel';
 
 OnboardingModal.propTypes = {
@@ -51,7 +50,7 @@ function OnboardingModal(props) {
         max-width: 100%;
         height: auto;
 
-        ${breakpoint('tablet')`
+        ${breakpoint('lg')`
             width: auto;
         `}
     `;
