@@ -12,7 +12,6 @@ Carousel.propTypes = {
 function Carousel(props) {
     const SliderContainer = styled.div`
       height: 100%;
-      background-color: #222C3B;
       padding: 3rem;
     `;
 

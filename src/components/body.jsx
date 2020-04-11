@@ -1,142 +1,55 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import {breakpoint} from '../utils';
 
-import Carousel from './carousel';
 import Thumbnail from './thumbnail';
-import OnboardingModal from './onboardingModal';
 
-import themes from '../themes';
+Body.propTypes = {
+    themeList: PropTypes.array.isRequired,
+};
 
-function Body() {
-    const [isOnboardingModalOpen, setModal] = useState(false);
-
-    // Show onboarding tutorial if user has never seen it
-    useEffect(() => {
-        const onboardingCompleted = localStorage.getItem('mmthemesOnboardingCompleted');
-        if (!onboardingCompleted) {
-            setModal(true);
-        }
-    });
-
-    const closeModal = () => {
-        localStorage.setItem('mmthemesOnboardingCompleted', 'true');
-        setModal(false);
-    };
-
-    const openModal = () => {
-        localStorage.removeItem('mmthemesOnboardingCompleted');
-        setModal(true);
-    };
-
+function Body(props) {
     const Wrapper = styled.div`
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
         overflow-x: hidden;
         font-size: 1.5rem;
         color: #fff;
+        padding: 20px;
+
+        ${breakpoint('xl')`
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        `}
+
+        ${breakpoint('lg', 'xl')`
+            grid-template-columns: 1fr 1fr 1fr;
+        `}
+
+        ${breakpoint('md', 'lg')`
+            grid-template-columns: 1fr 1fr;
+        `}
+        ${breakpoint('xs', 'md')`
+            grid-template-columns: 1fr;
+        `}
     `;
 
-    const Section = styled.div`
-        margin-top: 2rem;
-    `;
-
-    const SectionTitle = styled.h3`
-        font-weight: 400;
-        text-indent: 2rem;
-        font-size: 2.3rem;
-    `;
-
-    const SectionList = styled.ol`
-        line-height: 1.5;
-        padding-inline-start: 2rem;
-        margin-left: 2rem;
-    `;
-
-    const Span = styled.span`
-        font-weight: bold;
-    `;
-
-    const TutorialButton = styled.button`
-        margin-left: 2rem;
-        border-radius: 4px;
-        border: none;
-        background-color: #0058CC;
-        color: #fff;
-        padding: 10px;
-        cursor: pointer;
-
-        &:hover {
-            background-color: #044FB1;
-        }
-    `;
-
-    const lightThemes = [];
-    const darkThemes = [];
-    themes.forEach((theme) => {
-        const thumbnail = (
+    const thumbnails = props.themeList.map((theme, index) => {
+        return (
             <Thumbnail
                 key={theme.name}
+                index={index + 1}
                 name={theme.name}
                 image={theme.thumbnailUrl}
                 theme={theme.theme}
             />
         );
-
-        if (theme.type === 'light') {
-            lightThemes.push(thumbnail);
-        } else {
-            darkThemes.push(thumbnail);
-        }
     });
 
     return (
         <Wrapper>
-            <OnboardingModal
-                isModalOpen={isOnboardingModalOpen}
-                closeModal={closeModal}
-                contentLabel={'How To'}
-            />
-            <Section>
-                <SectionTitle>{'How to:'}</SectionTitle>
-                <SectionList>
-                    <li>
-                        <Span>{'Click on a thumbnail '}</Span>{'to copy it to your clipboard'}
-                    </li>
-                    <li>{'Go to a Mattermost server of your choice'}</li>
-                    <li>
-                        {'Navigate to the '}
-                        <Span>{'Main Menu\'s Account Settings'}</Span>
-                    </li>
-                    <li>
-                        {'Select '}
-                        <Span>{'Display '}</Span>
-                        {'and toggle the '}
-                        <Span>{'Theme '}</Span>
-                        {'tab'}
-                    </li>
-                    <li>
-                        {'Select '}
-                        <Span>{'Custom Theme'}</Span>
-                    </li>
-                    <li>
-                        <Span>{'Paste the theme '}</Span>
-                        {'inside the text box and '}
-                        <Span>{'Save'}</Span>
-                    </li>
-                </SectionList>
-
-                <TutorialButton onClick={openModal}>{'View detailed tutorial'}</TutorialButton>
-            </Section>
-
-            <Section>
-                <SectionTitle>{'Light Themes'}</SectionTitle>
-                <Carousel>{lightThemes}</Carousel>
-            </Section>
-
-            <Section>
-                <SectionTitle>{'Dark Themes'}</SectionTitle>
-                <Carousel>{darkThemes}</Carousel>
-            </Section>
+            {thumbnails}
         </Wrapper>
     );
 }
