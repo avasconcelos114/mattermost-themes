@@ -4,6 +4,7 @@ import breakpoint from 'styled-components-breakpoint';
 import styled from 'styled-components';
 import Modal from 'react-modal';
 
+import {colors, hexToRgba} from '../utils';
 import Carousel from './carousel';
 
 OnboardingModal.propTypes = {
@@ -29,9 +30,13 @@ function OnboardingModal(props) {
     `;
 
     const StepText = styled.p`
-        color: #fff;
+        color: ${colors.font};
         text-align: center;
         font-size: 3rem;
+
+        strong {
+            color: ${colors.fontHighlight}
+        }
     `;
 
     const StepImageWrapper = styled.div`
@@ -58,9 +63,13 @@ function OnboardingModal(props) {
         padding: 20px;
         margin: 0;
         cursor: pointer;
-        color: #0058CC;
-        text-decoration: underline;
-        font-size: 1.5rem;
+        color: ${colors.link};
+        font-size: 1.8rem;
+        background: rgba(0, 0, 0, 0.2);
+
+        &:hover {
+            color: ${hexToRgba(colors.link, 0.8)}
+        }
     `;
 
     const modalStyle = {
@@ -79,7 +88,7 @@ function OnboardingModal(props) {
         content: {
             padding: 0,
             border: 'none',
-            background: '#181F29',
+            background: colors.main,
             display: 'flex',
             flexDirection: 'column',
             width: 'auto',

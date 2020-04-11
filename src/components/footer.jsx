@@ -2,12 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import {Github} from 'styled-icons/boxicons-logos/Github';
+import {colors, hexToRgba} from '../utils';
 
 function Footer() {
     const Wrapper = styled.div`
         margin-top: 5rem;
         padding: 1.5rem;
-        background-color: #222C3B;
+        background-color: ${colors.main};
         display: flex;
         flex-direction: column;
         font-size: 1.7rem;
@@ -21,12 +22,12 @@ function Footer() {
 
         span {
             text-decoration: none;
-            color: #d4d4d4;
+            color: ${colors.font};
             
         }
 
         span > a {
-            color: blue;
+            color: ${colors.link};
         }
     `;
 
@@ -34,39 +35,38 @@ function Footer() {
       display: flex;
       flex-direction: row;
       text-decoration: none;
-      color: #d4d4d4;
+      align-items: center;
+      color: ${colors.font};
       margin-left: 2rem;
 
       &:hover {
-        color: #fff;
+        color: ${hexToRgba(colors.font, 0.8)};
 
         svg {
-          color: #fff;
+          color: ${hexToRgba(colors.font, 0.8)};
         }
       }
     `;
 
     const GithubIconWhite = styled(Github)`
-      height: 4.5rem;
-      color: #d4d4d4;
+      height: 4rem;
       padding-right: 1.5rem;
     `;
 
     const Span = styled.div`
-        color: #d4d4d4;
         display: flex;
         flex-direction: column;
         line-height: 1.5;
-        align-items: center;
+        align-items: flex-end;
 
         span {
-            margin-top: 2rem;
+            margin-top: 10px;
         }
 
         span > a {
             text-decoration: none;
             font-weight: bold;
-            color: #1969D3;
+            color: ${colors.link};
         }
     `;
 
@@ -84,12 +84,7 @@ function Footer() {
                     <a href='https://mattermost.com'>{'Mattermost Inc.'}</a>
                 </span>
                 <span>
-                    {'Created for the '}
-                    <a href='https://hacktoberfest.digitalocean.com/'>
-                        {'2019 Hacktoberfest '}
-                    </a>
-                    {'by'}
-                    <br/>
+                    {'Created by '}
                     <a href='https://github.com/avasconcelos114/'>{'Andre Vasconcelos'}</a>
                     {' & '}
                     <a href='https://github.com/josephk96'>{'Soo Hwan Kim'}</a>
