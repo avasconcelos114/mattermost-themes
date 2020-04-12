@@ -37,6 +37,7 @@ function Header(props) {
         flex-direction: row;
         height: 60px;
         align-items: center;
+        overflow-x: auto;
     `;
 
     const Title = styled.div`
