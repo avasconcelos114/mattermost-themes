@@ -147,9 +147,10 @@
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "eslint": "^6.8.0",
-    "eslint-plugin-mattermost": "github:mattermost/eslint-plugin-mattermost",
     "eslint-loader": "^3.0.4",
     "eslint-plugin-header": "^3.0.0",
-    "eslint-plugin-react": "^7.19.0"
+    "eslint-plugin-mattermost": "github:mattermost/eslint-plugin-mattermost",
+    "eslint-plugin-react": "^7.19.0",
+    "preload-webpack-plugin": "^3.0.0-beta.4"
   }
 }
