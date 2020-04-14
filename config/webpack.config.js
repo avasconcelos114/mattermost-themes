@@ -24,6 +24,7 @@ const modules = require('./modules');
 const getClientEnvironment = require('./env');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpackPlugin');
+const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
 const eslint = require('eslint');
 
@@ -582,6 +583,19 @@ module.exports = function(webpackEnv) {
                         undefined
                 )
             ),
+            new PreloadWebpackPlugin({
+                rel: 'preload',
+                include: 'allAssets', // or 'initial', or 'allAssets'
+                as(entry) {
+                    if (/\.css$/.test(entry)) return 'style';
+                    if (/\.woff$/.test(entry)) return 'font';
+                    if (/\.eot$/.test(entry)) return 'font';
+                    if (/\.ttf$/.test(entry)) return 'font';
+                    if (/\.png$/.test(entry)) return 'image';
+                    if (/\.svg$/.test(entry)) return 'image';
+                    return 'script';
+                },
+            }),
 
             // Inlines the webpack runtime script. This script is too small to warrant
             // a network request.
