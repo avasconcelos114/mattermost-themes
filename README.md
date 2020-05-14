@@ -6,10 +6,9 @@
 
 This website was created by @avasconcelos114 and @josephk96 for the 2019 Hacktoberfest. We wanted to create an open-source project that would enable Mattermost users to easily copy and paste themes to use.
 
-## Code Style
+## Code Block Style
 
-Mattermost Themes follows the official Mattermost style guide, which you can read more about by clicking the link below:  
-https://docs.mattermost.com/developer/style-guide.html
+Mattermost Themes follow the supported code styles in Mattermost - one of GitHub Theme, Solarized Dark Theme, Solarized Light Theme and Monokai Theme: https://docs.mattermost.com/help/messaging/formatting-text.html#code-block
 
 ## Tech Stack
 
