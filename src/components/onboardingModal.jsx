@@ -6,8 +6,11 @@ import Modal from 'react-modal';
 import {colors, hexToRgba, breakpoint} from '../utils';
 import Carousel from './carousel';
 
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 OnboardingModal.propTypes = {
-    isModalOpen: PropTypes.bool.isRequired,
+    isOpen: PropTypes.bool.isRequired,
     closeModal: PropTypes.func.isRequired,
 };
 
@@ -101,7 +104,7 @@ const modalStyle = {
 function OnboardingModal(props) {
     return (
         <Modal
-            isOpen={props.isModalOpen}
+            isOpen={props.isOpen}
             onRequestClose={props.closeModal}
             style={modalStyle}
         >

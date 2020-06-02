@@ -1,8 +1,11 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import asyncComponent from './asyncComponent';
 
-import OnboardingModal from './onboardingModal';
+const OnboardingModal = asyncComponent(() => {
+    return import('./onboardingModal');
+});
 import {colors, hexToRgba} from '../utils';
 
 Header.propTypes = {
@@ -80,29 +83,29 @@ function Header(props) {
     const [isOnboardingModalOpen, setModal] = useState(false);
 
     // Show onboarding tutorial if user has never seen it
-    useEffect(() => {
+    function showModal() {
         const onboardingCompleted = localStorage.getItem('mmthemesOnboardingCompleted');
-        if (!onboardingCompleted) {
-            setModal(true);
+        if (!onboardingCompleted || isOnboardingModalOpen) {
+            return (
+                <OnboardingModal
+                    isOpen={isOnboardingModalOpen}
+                    closeModal={closeModal}
+                />
+            );
         }
-    });
+        return null;
+    }
 
-    const closeModal = () => {
-        localStorage.setItem('mmthemesOnboardingCompleted', 'true');
-        setModal(false);
-    };
-
-    const openModal = () => {
-        localStorage.removeItem('mmthemesOnboardingCompleted');
+    function openModal() {
         setModal(true);
-    };
+    }
+
+    function closeModal() {
+        setModal(false);
+    }
     return (
         <Wrapper>
-            <OnboardingModal
-                isModalOpen={isOnboardingModalOpen}
-                closeModal={closeModal}
-                contentLabel={'How To'}
-            />
+            {showModal()}
             <Title>
                 <h3>
                     <span>{'Mattermost '}</span>

@@ -7,9 +7,6 @@ import Footer from './components/footer';
 import themes from './themes';
 import {colors} from './utils';
 
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
 const GlobalStyle = createGlobalStyle`
     html,
     body {
