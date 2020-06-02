@@ -1,7 +1,9 @@
 import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import {Power3, TweenLite} from 'gsap';
+
+const getGSAP = () => import('gsap');
+
 import {hexToRgba} from '../utils';
 
 Thumbnail.propTypes = {
@@ -11,67 +13,69 @@ Thumbnail.propTypes = {
     index: PropTypes.number,
 };
 
+const ThemeTitleContainer = styled.div`
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+`;
+
+const Image = styled.div.attrs((props) => ({
+    background: `url(${process.env.PUBLIC_URL}/img/${props.image})`,
+}))`
+    background: ${(props) => props.background};
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    width: 100%;
+    height: 30rem;
+`;
+
+const ImageOverlay = styled.div.attrs((props) => ({
+    background: hexToRgba(props.theme.sidebarBg, 0.8),
+    color: props.theme.sidebarText,
+}))`
+    display: flex;
+    background: ${(props) => props.background};
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        font-size: 2rem;
+        color: ${(props) => props.color}
+    }
+`;
+
+const Wrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.2rem;
+    width: 0%;
+    height: 0%;
+    overflow: hidden;
+    box-shadow: 1px 6px 20px rgba(0,0,0,0.35);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+`;
+
 function Thumbnail(props) {
     const copyTextRef = React.createRef();
     const overlayRef = React.createRef();
     const thumbnailRef = React.createRef();
 
     useEffect(() => {
-        if (props.index) {
+        async function animate() {
+            const {TweenLite, Power3} = await getGSAP();
             setTimeout(() => {
                 TweenLite.to(thumbnailRef.current, 0, {width: '100%', ease: Power3.easeOut});
                 TweenLite.to(thumbnailRef.current, 0, {height: '33rem', ease: Power3.easeOut});
-            }, props.index * 70);
+            }, props.index * 70 || 1);
         }
+        animate();
     }, []);
-
-    const Wrapper = styled.div`
-        display: flex;
-        flex-direction: column;
-        border-radius: 1.2rem;
-        width: 0%;
-        height: 0%;
-        overflow: hidden;
-        box-shadow: 1px 6px 20px rgba(0,0,0,0.35);
-        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    `;
-
-    const ThemeTitleContainer = styled.div`
-        display: flex;
-        width: 100%;
-        height: 3rem;
-        justify-content: center;
-        align-items: center;
-        background: ${props.theme.sidebarBg};
-    `;
-
-    const ThemeTitle = styled.p`
-        color: ${props.theme.sidebarText};
-    `;
-
-    const Image = styled.div`
-        background: url(${process.env.PUBLIC_URL}/img/${props.image});
-        background-repeat: no-repeat;
-        background-size: cover;
-        cursor: pointer;
-        width: 100%;
-        height: 30rem;
-    `;
-
-    const ImageOverlay = styled.div`
-        display: flex;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        justify-content: center;
-        align-items: center;
-        background: ${hexToRgba(props.theme.sidebarBg, 0.8)};
-
-        span {
-            font-size: 2rem;
-            color: ${props.theme.sidebarText};
-        }
-    `;
 
     function copyToClipboard() {
         let style = JSON.stringify(props.theme);
@@ -93,11 +97,13 @@ function Thumbnail(props) {
         copyTextRef.current.innerHTML = 'Copied!';
     }
 
-    function onMouseleave() {
+    async function onMouseleave() {
+        const {TweenLite, Power3} = await getGSAP();
         TweenLite.to(overlayRef.current, 0.25, {css: {opacity: 0}, ease: Power3.easeOut}).play();
     }
 
-    function onMouseEnter() {
+    async function onMouseEnter() {
+        const {TweenLite, Power3} = await getGSAP();
         copyTextRef.current.innerHTML = 'Copy style';
         TweenLite.to(overlayRef.current, 0.25, {css: {opacity: 1}, ease: Power3.easeOut}).play();
     }
@@ -107,16 +113,21 @@ function Thumbnail(props) {
             ref={thumbnailRef}
             onClick={copyToClipboard}
         >
-            <ThemeTitleContainer>
-                <ThemeTitle>{props.name}</ThemeTitle>
+            <ThemeTitleContainer style={{background: props.theme.sidebarBg}}>
+                <p style={{color: props.theme.sidebarText}}>{props.name}</p>
             </ThemeTitleContainer>
-            <Image>
+            <Image image={props.image}>
                 <ImageOverlay
                     ref={overlayRef}
+                    theme={props.theme}
                     onMouseEnter={onMouseEnter}
                     onMouseLeave={onMouseleave}
                 >
-                    <span ref={copyTextRef}>{'Copy style'}</span>
+                    <span
+                        ref={copyTextRef}
+                    >
+                        {'Copy style'}
+                    </span>
                 </ImageOverlay>
             </Image>
         </Wrapper>

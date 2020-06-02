@@ -3,72 +3,72 @@ import styled from 'styled-components';
 import {Github} from 'styled-icons/boxicons-logos/Github';
 import {colors, hexToRgba, breakpoint} from '../utils';
 
-function Footer() {
-    const Wrapper = styled.div`
-        margin-top: 5rem;
-        padding: 1.5rem;
-        background-color: ${colors.main};
-        display: flex;
-        flex-direction: column;
-        font-size: 1.7rem;
-        justify-content: space-between;
-        align-items: center;
-        min-height: 10rem;
+const Wrapper = styled.div`
+    margin-top: 5rem;
+    padding: 1.5rem;
+    background-color: ${colors.main};
+    display: flex;
+    flex-direction: column;
+    font-size: 1.7rem;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10rem;
 
-        ${breakpoint('md')`
-            flex-direction: row;
-        `}
+    ${breakpoint('md')`
+        flex-direction: row;
+    `}
 
-        span {
-            text-decoration: none;
-            color: ${colors.font};
-            
-        }
+    span {
+        text-decoration: none;
+        color: ${colors.font};
+        
+    }
 
-        span > a {
-            color: ${colors.link};
-        }
-    `;
+    span > a {
+        color: ${colors.link};
+    }
+`;
 
-    const Link = styled.a`
-      display: flex;
-      flex-direction: row;
-      text-decoration: none;
-      align-items: center;
-      color: ${colors.font};
-      margin-left: 2rem;
+const Link = styled.a`
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    align-items: center;
+    color: ${colors.font};
+    margin-left: 2rem;
 
-      &:hover {
+    &:hover {
+    color: ${hexToRgba(colors.font, 0.8)};
+
+    svg {
         color: ${hexToRgba(colors.font, 0.8)};
+    }
+    }
+`;
 
-        svg {
-          color: ${hexToRgba(colors.font, 0.8)};
-        }
-      }
-    `;
+const GithubIconWhite = styled(Github)`
+    height: 4rem;
+    padding-right: 1.5rem;
+`;
 
-    const GithubIconWhite = styled(Github)`
-      height: 4rem;
-      padding-right: 1.5rem;
-    `;
+const Span = styled.div`
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+    align-items: flex-end;
 
-    const Span = styled.div`
-        display: flex;
-        flex-direction: column;
-        line-height: 1.5;
-        align-items: flex-end;
+    span {
+        margin-top: 10px;
+    }
 
-        span {
-            margin-top: 10px;
-        }
+    span > a {
+        text-decoration: none;
+        font-weight: bold;
+        color: ${colors.link};
+    }
+`;
 
-        span > a {
-            text-decoration: none;
-            font-weight: bold;
-            color: ${colors.link};
-        }
-    `;
-
+function Footer() {
     return (
         <Wrapper>
             <Link href='https://github.com/avasconcelos114/mattermost-themes'>
