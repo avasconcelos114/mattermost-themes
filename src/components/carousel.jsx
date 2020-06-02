@@ -9,17 +9,17 @@ Carousel.propTypes = {
     isOnboarding: PropTypes.bool,
 };
 
+const SliderContainer = styled.div`
+    height: 100%;
+    padding: 3rem;
+`;
+
+const Padding = styled.div`
+    padding-left: 5.5rem;
+    padding-right: 4.5rem;
+`;
+
 function Carousel(props) {
-    const SliderContainer = styled.div`
-      height: 100%;
-      padding: 3rem;
-    `;
-
-    const Padding = styled.div`
-        padding-left: 5.5rem;
-        padding-right: 4.5rem;
-    `;
-
     const settings = {
         dots: true,
         infinite: false,
