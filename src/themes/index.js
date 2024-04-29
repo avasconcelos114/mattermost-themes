@@ -28,6 +28,9 @@ import twitter from './twitter';
 import vueJs from './vueJs';
 import windows95 from './windows95';
 import youtube from './youtube';
+import rosePine from './rosePine';
+import rosePineDawn from './rosePineDawn';
+import rosePineMoon from './rosePineMoon';
 
 const themes = [
     arc,
@@ -52,6 +55,9 @@ const themes = [
     redditDark,
     redditLight,
     retroTerminal,
+    rosePine,
+    rosePineDawn,
+    rosePineMoon,
     solarizedDark,
     solarizedLight,
     spotify,
