@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/mattermost-themes/static/js/main.70678c93.chunk.js",
-    "main.js.map": "/mattermost-themes/static/js/main.70678c93.chunk.js.map",
+    "main.js": "/mattermost-themes/static/js/main.6746c6bc.chunk.js",
+    "main.js.map": "/mattermost-themes/static/js/main.6746c6bc.chunk.js.map",
     "runtime-main.js": "/mattermost-themes/static/js/runtime-main.a90683ed.js",
     "runtime-main.js.map": "/mattermost-themes/static/js/runtime-main.a90683ed.js.map",
     "static/css/2.528f777f.chunk.css": "/mattermost-themes/static/css/2.528f777f.chunk.css",
@@ -14,7 +14,7 @@
     "static/js/5.c8566ae1.chunk.js": "/mattermost-themes/static/js/5.c8566ae1.chunk.js",
     "static/js/5.c8566ae1.chunk.js.map": "/mattermost-themes/static/js/5.c8566ae1.chunk.js.map",
     "index.html": "/mattermost-themes/index.html",
-    "precache-manifest.ca7c5a012fdf3d9dd5ece13aa75cde6d.js": "/mattermost-themes/precache-manifest.ca7c5a012fdf3d9dd5ece13aa75cde6d.js",
+    "precache-manifest.3eaed933b2edb2e52c86dc35026c0019.js": "/mattermost-themes/precache-manifest.3eaed933b2edb2e52c86dc35026c0019.js",
     "service-worker.js": "/mattermost-themes/service-worker.js",
     "static/css/2.528f777f.chunk.css.map": "/mattermost-themes/static/css/2.528f777f.chunk.css.map",
     "static/media/slick-theme.css": "/mattermost-themes/static/media/slick.f97e3bbf.svg"
