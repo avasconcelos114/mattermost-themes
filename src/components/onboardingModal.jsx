@@ -119,7 +119,7 @@ function OnboardingModal(props) {
                         <StepImageWrapper>
                             <StepImage
                                 alt={'onboarding_1'}
-                                src={`/img/onboarding/onboarding_1.png`}
+                                src={`${import.meta.env.BASE_URL}img/onboarding/onboarding_1.png`}
                             />
                         </StepImageWrapper>
                     </StepWrapper>
@@ -133,7 +133,7 @@ function OnboardingModal(props) {
                         <StepImageWrapper>
                             <StepImage
                                 alt={'onboarding_2'}
-                                src={`/img/onboarding/onboarding_2.png`}
+                                src={`${import.meta.env.BASE_URL}img/onboarding/onboarding_2.png`}
                             />
                         </StepImageWrapper>
                     </StepWrapper>
@@ -148,7 +148,7 @@ function OnboardingModal(props) {
                         <StepImageWrapper>
                             <StepImage
                                 alt={'onboarding_3'}
-                                src={`/img/onboarding/onboarding_3.png`}
+                                src={`${import.meta.env.BASE_URL}img/onboarding/onboarding_3.png`}
                             />
                         </StepImageWrapper>
                     </StepWrapper>
@@ -165,7 +165,7 @@ function OnboardingModal(props) {
                         <StepImageWrapper>
                             <StepImage
                                 alt={'onboarding_4'}
-                                src={`/img/onboarding/onboarding_4.png`}
+                                src={`${import.meta.env.BASE_URL}img/onboarding/onboarding_4.png`}
                             />
                         </StepImageWrapper>
                     </StepWrapper>
