@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Github} from 'styled-icons/boxicons-logos/Github';
+import {Github} from 'styled-icons/boxicons-logos';
 import {colors, hexToRgba, breakpoint} from '../utils';
 
 const Wrapper = styled.div`

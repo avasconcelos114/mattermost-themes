@@ -16,7 +16,7 @@ OnboardingModal.propTypes = {
 
 // This line breaks tests but it's necessary for modal to function
 // For now we're ignoring this only during unit tests
-if (process.env.NODE_ENV !== 'test') {
+if (import.meta.env.MODE !== 'test') {
     Modal.setAppElement('#root');
 }
 
@@ -119,7 +119,7 @@ function OnboardingModal(props) {
                         <StepImageWrapper>
                             <StepImage
                                 alt={'onboarding_1'}
-                                src={`${process.env.PUBLIC_URL}/img/onboarding/onboarding_1.png`}
+                                src={`/img/onboarding/onboarding_1.png`}
                             />
                         </StepImageWrapper>
                     </StepWrapper>
@@ -133,7 +133,7 @@ function OnboardingModal(props) {
                         <StepImageWrapper>
                             <StepImage
                                 alt={'onboarding_2'}
-                                src={`${process.env.PUBLIC_URL}/img/onboarding/onboarding_2.png`}
+                                src={`/img/onboarding/onboarding_2.png`}
                             />
                         </StepImageWrapper>
                     </StepWrapper>
@@ -148,7 +148,7 @@ function OnboardingModal(props) {
                         <StepImageWrapper>
                             <StepImage
                                 alt={'onboarding_3'}
-                                src={`${process.env.PUBLIC_URL}/img/onboarding/onboarding_3.png`}
+                                src={`/img/onboarding/onboarding_3.png`}
                             />
                         </StepImageWrapper>
                     </StepWrapper>
@@ -165,7 +165,7 @@ function OnboardingModal(props) {
                         <StepImageWrapper>
                             <StepImage
                                 alt={'onboarding_4'}
-                                src={`${process.env.PUBLIC_URL}/img/onboarding/onboarding_4.png`}
+                                src={`/img/onboarding/onboarding_4.png`}
                             />
                         </StepImageWrapper>
                     </StepWrapper>
