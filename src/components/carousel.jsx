@@ -10,13 +10,12 @@ Carousel.propTypes = {
 };
 
 const SliderContainer = styled.div`
-    height: 100%;
-    padding: 3rem;
+    padding: ${(props) => props.$compact ? '1rem' : '3rem'};
 `;
 
 const Padding = styled.div`
-    padding-left: 5.5rem;
-    padding-right: 4.5rem;
+    padding-left: ${(props) => props.$compact ? '0' : '5.5rem'};
+    padding-right: ${(props) => props.$compact ? '0' : '4.5rem'};
 `;
 
 function Carousel(props) {
@@ -58,12 +57,13 @@ function Carousel(props) {
     if (props.isOnboarding) {
         settings.slidesToShow = 1;
         settings.slidesToScroll = 1;
+        settings.arrows = false;
         settings.responsive = [];
     }
 
     return (
-        <SliderContainer>
-            <Padding>
+        <SliderContainer $compact={props.isOnboarding}>
+            <Padding $compact={props.isOnboarding}>
                 <Slider {...settings}>{props.children}</Slider>
             </Padding>
         </SliderContainer>

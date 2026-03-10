@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import {KeyboardArrowLeft} from 'styled-icons/material/KeyboardArrowLeft';
-import {KeyboardArrowRight} from 'styled-icons/material/KeyboardArrowRight';
+import {KeyboardArrowLeft, KeyboardArrowRight} from 'styled-icons/material';
 
 CarouselArrow.propTypes = {
     className: PropTypes.string,

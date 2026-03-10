@@ -31,28 +31,17 @@ function App() {
     const [themeList, setThemes] = useState([]);
 
     useEffect(() => {
-        getThemes();
-    }, [filter]);
-
-    function getThemes() {
-        let filteredThemes;
         switch (filter) {
         case 'light':
-            filteredThemes = themes.filter((theme) => {
-                return theme.type === 'light';
-            });
-            setThemes(filteredThemes);
+            setThemes(themes.filter((theme) => theme.type === 'light'));
             break;
         case 'dark':
-            filteredThemes = themes.filter((theme) => {
-                return theme.type === 'dark';
-            });
-            setThemes(filteredThemes);
+            setThemes(themes.filter((theme) => theme.type === 'dark'));
             break;
         default:
             setThemes(themes);
         }
-    }
+    }, [filter]);
 
     return (
         <div>

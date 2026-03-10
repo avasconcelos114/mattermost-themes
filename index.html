@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0058CC" />
+    <meta name="description" content="A collection of Mattermost themes that can be easily copy-pasted to your server of choice." />
+    <meta name="keywords" content="mattermost, themes, light theme, dark theme, mattermost custom theme"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Mattermost Themes</title>
+    <style>
+      @font-face {
+        font-family: Metropolis;
+        font-display: swap;
+        src: url(/fonts/Metropolis-Regular.otf);
+      }
+
+      @font-face {
+        font-family: Metropolis;
+        font-weight: bold;
+        font-display: swap;
+        src: url(/fonts/Metropolis-Bold.otf);
+      }
+
+      @font-face {
+        font-family: Metropolis;
+        font-weight: 500;
+        font-display: swap;
+        src: url(/fonts/Metropolis-SemiBold.otf);
+      }
+
+      html, body {
+        font-family: Metropolis, sans-serif !important;
+      }
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149343779-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'UA-149343779-1');
+    </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/index.jsx"></script>
+  </body>
+</html>

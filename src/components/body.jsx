@@ -41,8 +41,8 @@ function Body(props) {
                 key={theme.name}
                 index={index + 1}
                 name={theme.name}
-                image={theme.thumbnailUrl}
                 theme={theme.theme}
+                addedDate={theme.addedDate}
             />
         );
     });

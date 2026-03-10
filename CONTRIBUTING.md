@@ -6,12 +6,10 @@ When contributing to this repository, please first discuss the change you wish t
 email, or any other method with the owners of this repository before making a change. 
 
 ## Adding a new theme
-1. Get a screenshot of a given theme you'd like to add to this repository
-2. Save the screenshot under `public/img` with the naming standard `{themeName}.png` (in camel-casing)
-3. Add a new file under `src/themes` and copy the contents of another theme into this one
-4. Edit the `name`, `thumbnailUrl`, the `type` of theme to either `light` or `dark, and paste the JSON string from Mattermost's Account Settings into `theme`
-5. Import your newly created file to `src/themes/index.js` and add it to the exports
-6. Create a PR (see below) to add your contribution!
+1. Add a new file under `src/themes` named `{themeName}.js` (in camel-casing) and copy the contents of another theme into this one
+2. Edit the `name`, set `type` to either `light` or `dark`, set `addedDate` to today's date in `YYYY-MM-DD` format, and paste the JSON string from Mattermost's Account Settings into `theme`
+3. Import your newly created file in `src/themes/index.js` and add it to the array in alphabetical order
+4. Create a PR (see below) to add your contribution!
 
 ## Pull Request Process
 

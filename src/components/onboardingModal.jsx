@@ -16,18 +16,32 @@ OnboardingModal.propTypes = {
 
 // This line breaks tests but it's necessary for modal to function
 // For now we're ignoring this only during unit tests
-if (process.env.NODE_ENV !== 'test') {
+if (import.meta.env.MODE !== 'test') {
     Modal.setAppElement('#root');
 }
 
 const MAX_MODAL_WIDTH = 750;
 
 const CarouselWrapper = styled.div`
-    flex: 1;
+    width: 100%;
+    padding-bottom: 2rem;
+
+    .slick-dots li button:before {
+        color: #ffffff !important;
+        opacity: 0.5;
+    }
+
+    .slick-dots li.slick-active button:before {
+        color: #ffffff !important;
+        opacity: 1;
+    }
 `;
 
 const StepWrapper = styled.div`
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
 `;
 
 const StepText = styled.p`
@@ -41,19 +55,21 @@ const StepText = styled.p`
 `;
 
 const StepImageWrapper = styled.div`
-    height: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 20px 20px;
 `;
 
 const StepImage = styled.img`
-    margin: 0 auto;
+    display: block;
     width: 80%;
     max-width: 100%;
     height: auto;
 
     ${breakpoint('lg')`
         width: auto;
+        max-width: 100%;
     `}
 `;
 
@@ -92,12 +108,14 @@ const modalStyle = {
         background: colors.main,
         display: 'flex',
         flexDirection: 'column',
-        width: 'auto',
+        width: '90vw',
         maxWidth: MAX_MODAL_WIDTH,
-        top: 'initial',
-        bottom: 'initial',
-        left: window.innerWidth <= MAX_MODAL_WIDTH ? 10 : 'initial',
-        right: window.innerWidth <= MAX_MODAL_WIDTH ? 10 : 'initial',
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        transform: 'translate(-50%, -50%)',
+        overflow: 'visible',
     },
 };
 
@@ -119,7 +137,7 @@ function OnboardingModal(props) {
                         <StepImageWrapper>
                             <StepImage
                                 alt={'onboarding_1'}
-                                src={`${process.env.PUBLIC_URL}/img/onboarding/onboarding_1.png`}
+                                src={`${import.meta.env.BASE_URL}img/onboarding/onboarding_1.png`}
                             />
                         </StepImageWrapper>
                     </StepWrapper>
@@ -133,7 +151,7 @@ function OnboardingModal(props) {
                         <StepImageWrapper>
                             <StepImage
                                 alt={'onboarding_2'}
-                                src={`${process.env.PUBLIC_URL}/img/onboarding/onboarding_2.png`}
+                                src={`${import.meta.env.BASE_URL}img/onboarding/onboarding_2.png`}
                             />
                         </StepImageWrapper>
                     </StepWrapper>
@@ -148,7 +166,7 @@ function OnboardingModal(props) {
                         <StepImageWrapper>
                             <StepImage
                                 alt={'onboarding_3'}
-                                src={`${process.env.PUBLIC_URL}/img/onboarding/onboarding_3.png`}
+                                src={`${import.meta.env.BASE_URL}img/onboarding/onboarding_3.png`}
                             />
                         </StepImageWrapper>
                     </StepWrapper>
@@ -165,7 +183,7 @@ function OnboardingModal(props) {
                         <StepImageWrapper>
                             <StepImage
                                 alt={'onboarding_4'}
-                                src={`${process.env.PUBLIC_URL}/img/onboarding/onboarding_4.png`}
+                                src={`${import.meta.env.BASE_URL}img/onboarding/onboarding_4.png`}
                             />
                         </StepImageWrapper>
                     </StepWrapper>

@@ -1,9 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
+import { describe, it } from 'vitest';
 import App from './App';
 
-it('renders without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(<App/>, div);
-    ReactDOM.unmountComponentAtNode(div);
+describe('App', () => {
+    it('renders without crashing', () => {
+        const div = document.createElement('div');
+        document.body.appendChild(div);
+        const root = createRoot(div);
+        root.render(<App/>);
+        root.unmount();
+        document.body.removeChild(div);
+    });
 });
