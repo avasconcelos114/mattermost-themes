@@ -3,6 +3,9 @@ function mockMatchMedia() {
         matches: false,
         addListener() {},
         removeListener() {},
+        addEventListener() {},
+        removeEventListener() {},
+        dispatchEvent() { return false; },
     };
 }
 

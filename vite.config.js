@@ -5,4 +5,8 @@ export default defineConfig({
     plugins: [react()],
     base: '/mattermost-themes/',
     server: { port: 3000 },
+    test: {
+        environment: 'jsdom',
+        setupFiles: './src/setupTests.js',
+    },
 });

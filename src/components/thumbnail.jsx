@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -294,9 +294,9 @@ const Wrapper = styled.div`
 `;
 
 function Thumbnail(props) {
-    const copyTextRef = React.createRef();
-    const overlayRef = React.createRef();
-    const thumbnailRef = React.createRef();
+    const copyTextRef = useRef(null);
+    const overlayRef = useRef(null);
+    const thumbnailRef = useRef(null);
 
     const t = props.theme;
 
@@ -317,7 +317,7 @@ function Thumbnail(props) {
             }, props.index * 70 || 1);
         }
         animate();
-    }, []);
+    }, [props.index, thumbnailRef]);
 
     function copyToClipboard() {
         let style = JSON.stringify(props.theme);
